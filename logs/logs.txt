@@ -1,0 +1,9 @@
+<2021-04-23.21:25:08> Start loading json from file: big.json
+<2021-04-23.21:25:08> Parsing json from file: big.json completed 
+<2021-04-23.21:25:08> Output json to stdout<2021-04-23.21:25:08> Get value: 111 by parameter: param2
+<2021-04-23.21:25:08> Get value: "str" by parameter: param1
+<2021-04-23.21:25:08> Get value: 1 by parameter: param3
+<2021-04-23.21:25:08> Parameter:"data" already exist!
+<2021-04-23.21:25:08> Parameter:"blabal" already exist!
+<2021-04-23.21:25:08> Save configuration on the path: big.json
+<2021-04-23.21:25:08> Quit
