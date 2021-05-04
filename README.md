@@ -7,6 +7,10 @@
 {"param1":"str","param2":111,"param2":true, ... }
 ## Сборка и запуск
 ```
+git clone https://github.com/s-kat/Config.git
+cd Config
+git submodule init
+git submodule update
 cmake CMakeLists.txt
 make
 ./Config
