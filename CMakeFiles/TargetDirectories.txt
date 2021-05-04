@@ -1,3 +1,0 @@
-/home/sergey/Config/CMakeFiles/rebuild_cache.dir
-/home/sergey/Config/CMakeFiles/edit_cache.dir
-/home/sergey/Config/CMakeFiles/Config.dir
