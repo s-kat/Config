@@ -1,9 +1,22 @@
-<2021-04-23.21:25:08> Start loading json from file: big.json
-<2021-04-23.21:25:08> Parsing json from file: big.json completed 
-<2021-04-23.21:25:08> Output json to stdout<2021-04-23.21:25:08> Get value: 111 by parameter: param2
-<2021-04-23.21:25:08> Get value: "str" by parameter: param1
-<2021-04-23.21:25:08> Get value: 1 by parameter: param3
-<2021-04-23.21:25:08> Parameter:"data" already exist!
-<2021-04-23.21:25:08> Parameter:"blabal" already exist!
-<2021-04-23.21:25:08> Save configuration on the path: big.json
-<2021-04-23.21:25:08> Quit
+<2021-05-04.14:47:59> Start loading json from file: big.json
+<2021-05-04.14:47:59> Parsing json from file: big.json completed 
+<2021-05-04.14:47:59> Output json to stdout<2021-05-04.14:47:59> Get value: 123 by parameter: param_int1
+<2021-05-04.14:47:59> Error: configuration does not have parameter:param_int123
+<2021-05-04.14:47:59> Get value: 3.140000 by parameter: param_double1
+<2021-05-04.14:47:59> Error: value by parameter: param_int1 is not a double
+<2021-05-04.14:47:59> Get value: "str1" by parameter: param_str1
+<2021-05-04.14:47:59> Error: configuration does not have parameter:asd_str1
+<2021-05-04.14:47:59> Get value: 1 by parameter: param_bool1
+<2021-05-04.14:47:59> Get value: 0 by parameter: param_bool2
+<2021-05-04.14:47:59> Add parameter:"new_int1
+<2021-05-04.14:47:59> Add parameter:"new_bool
+<2021-05-04.14:47:59> Add parameter:"new_double
+<2021-05-04.14:47:59> Add parameter:"new_str
+<2021-05-04.14:47:59> Output json to stdout<2021-05-04.14:47:59> Parameter:"new_str" updated to:real_str
+<2021-05-04.14:47:59> Parameter:"new_double" updated to:100000000
+<2021-05-04.14:47:59> Parameter:"new_int1" updated to:0.243250
+<2021-05-04.14:47:59> Parameter:"new_double" updated to:1
+<2021-05-04.14:47:59> Output json to stdout<2021-05-04.14:47:59> Delete value from configuration with key:new_double
+<2021-05-04.14:47:59> Delete value from configuration with key:new_str
+<2021-05-04.14:47:59> Output json to stdout<2021-05-04.14:47:59> Save configuration on the path: new_big.json
+<2021-05-04.14:47:59> Quit
