@@ -158,7 +158,7 @@ public:
         if (configuration.HasMember(parameter.c_str())) {
             Log::getInstance().Log_trace("Parameter:\"" + parameter + "\" already exist!\n");
             // if exists then do nothing and return -1
-            return -1;
+            return 0;
         }
         // if not exists add parameter to json
         rapidjson::Value key;
@@ -168,7 +168,7 @@ public:
         val.SetString(rapidjson::StringRef(element.c_str()));
         configuration.AddMember(key, val, configuration.GetAllocator());
         Log::getInstance().Log_trace("Add parameter:\"" + parameter + "\n");
-        return 0;
+        return 1;
     }
 
     template <typename T>
@@ -200,14 +200,15 @@ public:
         output_file_stream.close();
     }
 
-    void RemoveValue(std::string key) {
+    int RemoveValue(std::string key) {
         const char * c_key = key.c_str();
         if (!configuration.HasMember(c_key)) {
             Log::getInstance().Log_trace("Error: configuration does not have parameter:" + key + "\n");
-            throw std::runtime_error("Missing parameter!");
+            return 0;
         }
         Log::getInstance().Log_trace("Delete value from configuration with key:" + key + "\n");
         configuration.RemoveMember(c_key);
+        return 1;
     }
 
     int UpdateString(std::string key, std::string value) {
@@ -219,7 +220,7 @@ public:
             return 0;
         } else {
             Log::getInstance().Log_trace("Parameter:\"" + key + "\" does not exist!\n");
-            return -1;
+            return 1;
         }
     }
     template <typename T>
@@ -229,10 +230,10 @@ public:
         if (configuration.HasMember(c_key)) {
             Log::getInstance().Log_trace("Parameter:\"" + key + "\" updated to:" + std::to_string(value) + "\n");
             configuration[c_key] = value;
-            return 0;
+            return 1;
         } else {
             Log::getInstance().Log_trace("Parameter:\"" + key + "\" does not exist!\n");
-            return -1;
+            return 0;
         }
     }
 
